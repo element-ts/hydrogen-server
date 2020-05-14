@@ -5,6 +5,11 @@
  * github.com/elijahjcobb
  */
 
+import * as HTTP from "http";
+import * as HTTPS from "https";
+import * as FS from "fs";
+import * as Path from "path";
+
 import {
 	HEndpointParam,
 	HEndpointReturn,
@@ -15,10 +20,6 @@ import {
 } from "@element-ts/hydrogen-core";
 import {HRequest} from "./HRequest";
 import {Neon} from "@element-ts/neon";
-import * as HTTP from "http";
-import * as HTTPS from "https";
-import * as FS from "fs";
-import * as Path from "path";
 import {HEndpointMap} from "./HEndpointMap";
 import {HResponse} from "./HResponse";
 import {HResponseManager} from "./HResponseManager";
@@ -26,6 +27,7 @@ import {HEndpoint, HEndpointConfig} from "./HEndpoint";
 import {HRequestParser} from "./HRequestParser";
 import {OType} from "@element-ts/oxygen";
 import {HRuntimeTypes} from "./types";
+
 
 export interface HServerConfig<T extends HServerRequests<T>> {
 	debug?: boolean;
